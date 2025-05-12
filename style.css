@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "General Sans", sans-serif;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    width: 100%;
+}
+#home{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    color: white;
+}
+#nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+#nav{
+    width: 100%;
+    padding: 30px 40px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+#heading{
+    margin-top: 25px;
+}
+#heading h1{
+    font-size: 9.8vw;
+    line-height: 1;
+    opacity: 0.6;
+    margin-left: 40px;
+    font-weight: bolder;
+}
+#heading h5{
+    text-transform: uppercase;
+    font-size: 1.1vw;
+}
+#heading #secondh1{
+    margin-left: 225px;
+
+}
+.blocktext{
+    width: fit-content;
+}
+.blocktext h5{
+    text-align: right;
+}
+#heading #smallheading{
+    text-transform: uppercase;
+    margin-top: 130px;
+    padding-right: 35px;
+}
+#smallheading h5{
+    text-align: right;
+    font-weight: 500;
+    font-weight: 18px;
+    margin-top: 0.2vw;
+}
+#herofooter a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+#herofooter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2vw;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+#herofooter #iconset{
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+    gap: 10px;
+}
+#herofooter .circle{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #939393;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#herofooter .circle i{
+    color: black;
+    margin: 5px ;
+    font-size: 20px;
+}
