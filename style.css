@@ -72,6 +72,7 @@ html, body{
     text-decoration: none;
     color: white;
     font-weight: 500;
+    padding-left: 2vw;
 }
 #herofooter{
     display: flex;
@@ -101,4 +102,37 @@ html, body{
     color: black;
     margin: 5px ;
     font-size: 20px;
+}
+#second{
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding-top: 150px;
+    padding-right: 10vw;
+    padding-left: 3vw;
+}
+#elem{
+    width: 100%;
+    border-top: 1.5px solid #888;
+    opacity: 0.8;
+    text-transform: uppercase;
+    padding: 3.5vw 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#elem h1{
+    font-size: 6.7vw;
+    font-weight: 500;
+    padding-bottom: 1.5px solid #888;
+    opacity: 0.8;
+}
+.last{
+    border-bottom: 1.5px solid #888;
+}
+#elem h5{
+    font-size: 1.1vw;
+    font-weight: 600;
+    color: white;
+    opacity: 1;
 }
