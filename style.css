@@ -7,6 +7,7 @@
 html, body{
     height: 100%;
     width: 100%;
+    background-color: black;
 }
 #main{
     width: 100%;
@@ -73,6 +74,9 @@ html, body{
     color: white;
     font-weight: 500;
     padding-left: 2vw;
+}
+#home{
+    position: relative;
 }
 #herofooter{
     display: flex;
