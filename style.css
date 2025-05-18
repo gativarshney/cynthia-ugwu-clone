@@ -137,7 +137,7 @@ html, body{
     padding-right: 10vw;
     padding-left: 3vw;
 }
-#elem{
+.elem{
     position: relative;
     width: 100%;
     border-top: 1.5px solid #888;
@@ -148,7 +148,7 @@ html, body{
     align-items: center;
     justify-content: space-between;
 }
-#elem h1{
+.elem h1{
     font-size: 6.7vw;
     font-weight: 500;
     padding-bottom: 1.5px solid #888;
@@ -157,17 +157,18 @@ html, body{
 .last{
     border-bottom: 1.5px solid #888;
 }
-#elem h5{
+.elem h5{
     font-size: 1.1vw;
     font-weight: 600;
     color: white;
     opacity: 1;
 }
-#elem img{
+.elem img{
     position: absolute;
     z-index: 999;
-    height: 130%;
-    display: none;
+    width: 25vw;
+    opacity: 0;
+    pointer-events: none;
 }
 #about{
     width: 100%;

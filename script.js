@@ -57,6 +57,38 @@ function circleMouseFollower(xscale, yscale){
         document.querySelector("#minicircle").style.transform = `translate(${dets.clientX}px, ${dets.clientY}px) scale(${xscale}, ${yscale})`;
     });
 }
+
+document.querySelectorAll(".elem").forEach((elem) =>{
+    let rotate = 0;
+    let diffrot = 0;
+    const img = elem.querySelector("img");
+    elem.addEventListener("mouseleave", function(details){
+        gsap.to(elem.querySelector("img"), {
+            opacity: 0,
+            ease: Power3,
+        });
+    });
+    elem.addEventListener("mousemove", function(details){
+        let diffY = details.clientY - elem.getBoundingClientRect().top;
+        diffrot = details.clientX - rotate;
+        rotate = details.clientX;
+        
+        const imgWidth = img.offsetWidth;
+        const imgHeight = img.offsetHeight;
+
+        gsap.set(img,{
+            opacity : 1,
+        })
+        gsap.to(img, {
+            ease: Power3,
+            duration: 0.5,
+            top: diffY - imgHeight / 2,
+            left: details.clientX - imgWidth / 2,
+            rotate: gsap.utils.clamp(-20, 20, diffrot * 0.5),
+        });
+    });
+});
+
 circleSquash();
 circleMouseFollower();
 firstPageAnim();
