@@ -3,6 +3,30 @@ const scroll = new LocomotiveScroll({
     smooth: true
 });
 
+let timeout;
+function circleSquash(){
+    let xscale = 1;
+    let yscale = 1;
+    let xprev = 0;
+    let yprev = 0;
+    window.addEventListener('mousemove', function(dets){
+        clearTimeout(timeout);
+
+        let xdiff = dets.clientX - xprev;
+        let ydiff = dets.clientY - yprev;
+        xprev = dets.clientX;
+        yprev = dets.clientY;
+
+        xscale = gsap.utils.clamp(0.7, 1.3, xdiff);
+        yscale = gsap.utils.clamp(0.7, 1.3, ydiff);
+
+        circleMouseFollower(xscale, yscale);
+        timeout = setTimeout(() => {
+            document.querySelector("#minicircle").style.transform = `translate(${dets.clientX}px, ${dets.clientY}px) scale(1, 1)`;
+        }, 100);
+    });
+}
+
 function firstPageAnim(){
     let timeLine = gsap.timeline();
     timeLine.from("#nav", {
@@ -28,10 +52,11 @@ function firstPageAnim(){
     })
 }
 
-function circleMouseFollower(){
+function circleMouseFollower(xscale, yscale){
     window.addEventListener('mousemove', function(dets){
-        document.querySelector("#minicircle").style.transform = `translate(${dets.clientX}px, ${dets.clientY}px)`;
-    })
+        document.querySelector("#minicircle").style.transform = `translate(${dets.clientX}px, ${dets.clientY}px) scale(${xscale}, ${yscale})`;
+    });
 }
+circleSquash();
 circleMouseFollower();
 firstPageAnim();

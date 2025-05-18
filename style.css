@@ -16,7 +16,7 @@ html, body{
     border-radius: 50%;
     position: absolute;
     z-index: 99999;
-    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
 }
 .bounding{
     width: fit-content;
